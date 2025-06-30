@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Test</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .test-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #d4af37;
+      margin-bottom: 1.5rem;
+    }
+    .success {
+      color: #4caf50;
+      font-weight: bold;
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 2px solid #4caf50;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <h1>React Test Page</h1>
+    <p>This is a simple test to verify if React is working correctly.</p>
+    <div id="root"></div>
+  </div>
+
+  <script type="text/babel">
+    function TestApp() {
+      return (
+        <div className="success">
+          React is working correctly! 🎉
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<TestApp />);
+  </script>
+</body>
+</html>
