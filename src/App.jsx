@@ -156,41 +156,58 @@ function App() {
     }));
   };
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: theme.bgColor }}>
-      {/* Simple Navigation Bar */}
+      {/* Navigation Bar */}
       <nav className="bg-luxury-charcoal shadow-lg p-4">
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
-            {/* Logo */}
+            {/* Logo - Using text as fallback */}
             <div className="flex items-center">
-              <a href="/">
-                <img 
-                  src="/img/logo-light.png" 
-                  alt="IceCoal Lounge Logo" 
-                  className="h-12"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = 'https://via.placeholder.com/150x60?text=IceCoal+Lounge';
-                  }}
-                />
+              <a href="/" className="flex items-center">
+                <div className="h-12 w-40 bg-luxury-gold/10 flex items-center justify-center rounded">
+                  <span className="text-luxury-gold font-bold text-lg">IceCoal Lounge</span>
+                </div>
               </a>
             </div>
             
-            {/* Simple Menu */}
+            {/* Desktop Menu */}
             <div className="hidden md:flex space-x-6">
-              <a href="https://www.icecoal.ca/" className="text-luxury-gold hover:text-luxury-accent">Home</a>
-              <a href="https://www.icecoal.ca/about-us/" className="text-luxury-gold hover:text-luxury-accent">About</a>
-              <a href="https://www.icecoal.ca/reservations/" className="text-luxury-gold hover:text-luxury-accent">Reservations</a>
-              <a href="https://www.icecoal.ca/contact/" className="text-luxury-gold hover:text-luxury-accent">Contact</a>
+              <a href="https://www.icecoal.ca/" className="text-luxury-gold hover:text-luxury-accent transition-colors">Home</a>
+              <a href="https://www.icecoal.ca/about-us/" className="text-luxury-gold hover:text-luxury-accent transition-colors">About Us</a>
+              <a href="https://www.icecoal.ca/reservations/" className="text-luxury-gold hover:text-luxury-accent transition-colors">Reservations</a>
+              <a href="https://www.icecoal.ca/contact/" className="text-luxury-gold hover:text-luxury-accent transition-colors">Contact</a>
             </div>
             
             {/* Mobile Menu Button */}
-            <button className="md:hidden text-luxury-gold">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button 
+              className="md:hidden text-luxury-gold focus:outline-none"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </button>
+          </div>
+          
+          {/* Mobile Menu */}
+          <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} mt-4`}>
+            <div className="flex flex-col space-y-3">
+              <a href="https://www.icecoal.ca/" className="text-luxury-gold hover:bg-luxury-gold/10 px-3 py-2 rounded transition-colors">Home</a>
+              <a href="https://www.icecoal.ca/about-us/" className="text-luxury-gold hover:bg-luxury-gold/10 px-3 py-2 rounded transition-colors">About Us</a>
+              <a href="https://www.icecoal.ca/reservations/" className="text-luxury-gold hover:bg-luxury-gold/10 px-3 py-2 rounded transition-colors">Reservations</a>
+              <a href="https://www.icecoal.ca/contact/" className="text-luxury-gold hover:bg-luxury-gold/10 px-3 py-2 rounded transition-colors">Contact</a>
+            </div>
+          </div>
           </div>
         </div>
       </nav>
