@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronDown, FaPlus, FaMinus } from 'react-icons/fa';
-import { FaHome, FaInfoCircle, FaCalendarAlt, FaImages, FaEnvelope } from 'react-icons/fa';
+// Icons removed for simplicity
 import { menuData } from './data/menuData';
 import './App.css';
 
@@ -130,11 +130,24 @@ const MenuCategory = ({ category, items, isOpen, onClick }) => {
 
 // Main App Component
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openCategories, setOpenCategories] = useState({
     shareables: true,
     poutine: false,
     // Add other categories as needed
   });
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMenuOpen && !event.target.closest('.mobile-menu-container')) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMenuOpen]);
 
   const toggleCategory = (category) => {
     setOpenCategories(prev => ({
@@ -145,106 +158,39 @@ function App() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: theme.bgColor }}>
-      {/* Navigation Bar */}
-      <nav className="bg-luxury-charcoal shadow-lg">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
+      {/* Simple Navigation Bar */}
+      <nav className="bg-luxury-charcoal shadow-lg p-4">
+        <div className="container mx-auto">
+          <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center">
-              <img 
-                src="/img/logo-light.png" 
-                alt="IceCoal Lounge Logo" 
-                className="h-12"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = 'https://via.placeholder.com/150x60?text=IceCoal+Lounge';
-                }}
-              />
-            </div>
-            
-            {/* Navigation Links */}
-            <div className="hidden md:flex space-x-8">
-              <a 
-                href="https://www.icecoal.ca/" 
-                className="text-luxury-gold hover:text-luxury-accent flex items-center space-x-1 transition-colors"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaHome className="mr-1" />
-                <span>Home</span>
-              </a>
-              <a 
-                href="https://www.icecoal.ca/about-us/" 
-                className="text-luxury-gold hover:text-luxury-accent flex items-center space-x-1 transition-colors"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaInfoCircle className="mr-1" />
-                <span>About Us</span>
-              </a>
-              <a 
-                href="https://www.icecoal.ca/reservations/" 
-                className="text-luxury-gold hover:text-luxury-accent flex items-center space-x-1 transition-colors"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaCalendarAlt className="mr-1" />
-                <span>Reservation</span>
-              </a>
-              <a 
-                href="https://www.google.com/maps/contrib/100690302882111051076/photos/@43.536913,-79.727382,3a,75y,90t/data=!3m7!1e2!3m5!1sAF1QipMkZYPcOIpX5XFS-j2oqyrhZ4hmH6euQNFH34Oc!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipMkZYPcOIpX5XFS-j2oqyrhZ4hmH6euQNFH34Oc%3Dw365-h273-k-no!7i1600!8i1200!4m3!8m2!3m1!1e1?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D" 
-                className="text-luxury-gold hover:text-luxury-accent flex items-center space-x-1 transition-colors"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaImages className="mr-1" />
-                <span>Gallery</span>
-              </a>
-              <a 
-                href="https://www.icecoal.ca/contact/" 
-                className="text-luxury-gold hover:text-luxury-accent flex items-center space-x-1 transition-colors"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaEnvelope className="mr-1" />
-                <span>Contact</span>
+              <a href="/">
+                <img 
+                  src="/img/logo-light.png" 
+                  alt="IceCoal Lounge Logo" 
+                  className="h-12"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = 'https://via.placeholder.com/150x60?text=IceCoal+Lounge';
+                  }}
+                />
               </a>
             </div>
             
-            {/* Mobile menu button (hidden on larger screens) */}
-            <div className="md:hidden">
-              <button className="text-luxury-gold focus:outline-none">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
+            {/* Simple Menu */}
+            <div className="hidden md:flex space-x-6">
+              <a href="https://www.icecoal.ca/" className="text-luxury-gold hover:text-luxury-accent">Home</a>
+              <a href="https://www.icecoal.ca/about-us/" className="text-luxury-gold hover:text-luxury-accent">About</a>
+              <a href="https://www.icecoal.ca/reservations/" className="text-luxury-gold hover:text-luxury-accent">Reservations</a>
+              <a href="https://www.icecoal.ca/contact/" className="text-luxury-gold hover:text-luxury-accent">Contact</a>
             </div>
-          </div>
-          
-          {/* Mobile menu (hidden by default) */}
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {[
-                { name: 'Home', href: 'https://www.icecoal.ca/', icon: <FaHome className="mr-2" /> },
-                { name: 'About Us', href: 'https://www.icecoal.ca/about-us/', icon: <FaInfoCircle className="mr-2" /> },
-                { name: 'Reservation', href: 'https://www.icecoal.ca/reservations/', icon: <FaCalendarAlt className="mr-2" /> },
-                { name: 'Gallery', href: 'https://www.google.com/maps/contrib/100690302882111051076/photos/@43.536913,-79.727382,3a,75y,90t/data=!3m7!1e2!3m5!1sAF1QipMkZYPcOIpX5XFS-j2oqyrhZ4hmH6euQNFH34Oc!2e10!6shttps:%2F%2Flh3.googleusercontent.com%2Fp%2FAF1QipMkZYPcOIpX5XFS-j2oqyrhZ4hmH6euQNFH34Oc%3Dw365-h273-k-no!7i1600!8i1200!4m3!8m2!3m1!1e1?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D', icon: <FaImages className="mr-2" /> },
-                { name: 'Contact', href: 'https://www.icecoal.ca/contact/', icon: <FaEnvelope className="mr-2" /> },
-              ].map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-luxury-gold hover:bg-luxury-charcoal hover:text-luxury-accent block px-3 py-2 rounded-md text-base font-medium"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <div className="flex items-center">
-                    {item.icon}
-                    {item.name}
-                  </div>
-                </a>
-              ))}
-            </div>
+            
+            {/* Mobile Menu Button */}
+            <button className="md:hidden text-luxury-gold">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </nav>
