@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
-import { FiLeaf, FiZap, FiPlus } from 'react-icons/fi';
-import { FaStar } from 'react-icons/fa';
+import { FiLeaf, FiZap, FiPlus, FiStar } from 'react-icons/fi';
 
 const MenuItem = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -71,11 +70,11 @@ const MenuItem = ({ item }) => {
           </h3>
           <div className="flex items-center gap-1">
             <div className="flex text-luxury-accent">
-              <FaStar className="text-sm" />
-              <FaStar className="text-sm" />
-              <FaStar className="text-sm" />
-              <FaStar className="text-sm" />
-              <FaStar className="text-sm opacity-30" />
+              <FiStar className="text-sm" />
+              <FiStar className="text-sm" />
+              <FiStar className="text-sm" />
+              <FiStar className="text-sm" />
+              <FiStar className="text-sm opacity-30" />
             </div>
           </div>
         </div>
