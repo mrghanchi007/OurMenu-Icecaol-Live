@@ -164,12 +164,18 @@ function App() {
       <nav className="bg-luxury-charcoal shadow-lg p-4">
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
-            {/* Logo - Using text as fallback */}
+            {/* Logo */}
             <div className="flex items-center">
               <a href="/" className="flex items-center">
-                <div className="h-12 w-40 bg-luxury-gold/10 flex items-center justify-center rounded">
-                  <span className="text-luxury-gold font-bold text-lg">IceCoal Lounge</span>
-                </div>
+                <img 
+                  src="https://icecoal.ca/wp-content/uploads/2023/10/logo-light-gray.png" 
+                  alt="IceCoal Lounge Logo" 
+                  className="h-12 object-contain"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = 'https://via.placeholder.com/150x60?text=IceCoal+Lounge';
+                  }}
+                />
               </a>
             </div>
             
@@ -208,17 +214,13 @@ function App() {
               <a href="https://www.icecoal.ca/contact/" className="text-luxury-gold hover:bg-luxury-gold/10 px-3 py-2 rounded transition-colors">Contact</a>
             </div>
           </div>
-          </div>
         </div>
       </nav>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8 max-w-4xl" style={{ backgroundColor: theme.bgColor }}>
         <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-luxury-gold mb-2">
-            IceCoal Lounge
-          </h1>
-          <p className="text-luxury-accent/80">
+          <p className="text-2xl md:text-3xl text-luxury-gold font-medium">
             Discover our exquisite menu
           </p>
         </header>
