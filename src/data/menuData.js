@@ -4,7 +4,7 @@ export const menuData = {
       id: 'sh1',
       name: 'Calamari',
       description: 'Dusted with garlic aioli',
-      price: 'CAD $14.99',
+      price: 'CAD $16.99',
       image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Shareables-Eatery-1.jpg',
       badges: []
     },
@@ -12,16 +12,24 @@ export const menuData = {
       id: 'sh2',
       name: 'Onion Rings',
       description: 'Seasoned with salt and pepper',
-      price: 'CAD $10.99',
+      price: 'CAD $14.99',
       image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Shareables-Eatery-3.jpg',
       badges: ['vegetarian']
     },
     {
       id: 'sh3',
-      name: 'Fries',
+      name: 'Veggie Potatoes',
       description: 'Crispy golden fries',
-      price: 'CAD $14.99',
+      price: 'CAD $12.99',
       image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Shareables-Eatery-2.jpg',
+      badges: ['vegetarian']
+    },
+    {
+      id: 'sh4',
+      name: 'Fries',
+      description: 'Classic cut, perfectly crisp and lightly salted',
+      price: 'CAD $10.99',
+      image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Fries.png',
       badges: ['vegetarian']
     }
   ],
@@ -122,16 +130,16 @@ export const menuData = {
     { id: 'sm4', name: 'D-tox, Baby Spinach and Pineapple', price: 'CAD $12.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Smoothies-4.jpg' },
     { id: 'sm5', name: 'Strawberry Banana Smoothie', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Smoothies-5.jpg' },
     { id: 'sm6', name: 'Mango Strawberry Smoothie', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Smoothies-7.jpg' },
-    { id: 'sm7', name: 'Blueberry Banana and Peanut Butter Smoothie', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Smoothies-8.jpg' },
-    { id: 'sm8', name: 'All Fruit Smoothie', price: 'CAD $11.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Smoothies-8.jpg' },
+    { id: 'sm7', name: 'Blueberry Banana and Peanut Butter Smoothie', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Blueberry-Banana-and-Peanut-Butter-Smoothie.png' },
+    { id: 'sm8', name: 'All Fruit Smoothie', price: 'CAD $11.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-All-Fruit-Smoothie.png' },
     { id: 'sm9', name: 'Purple Monstrosity Fruit Smoothie', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Smoothies-10.jpg' },
     { id: 'sm10', name: 'Avocado Smoothie', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Smoothies-11.jpg' }
   ],
   shakes: [
     { id: 'shk1', name: 'Mango Shake', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Shakes-1.jpg' },
-    { id: 'shk2', name: 'Chocolate Shake', price: 'CAD $10.00', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Shakes-1.jpg' },
-    { id: 'shk3', name: 'Coffee Shake', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Shakes-1.jpg' },
-    { id: 'shk4', name: 'Ice Cappuccino Shake', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Shakes-1.jpg' }
+    { id: 'shk2', name: 'Chocolate Shake', price: 'CAD $10.00', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Chocolate-Shake.png' },
+    { id: 'shk3', name: 'Coffee Shake', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Coffee-Shake.png' },
+    { id: 'shk4', name: 'Ice Cappuccino Shake', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Ice-Cappuccino-Shake.png' }
   ],
   mocktails: [
     { id: 'moc1', name: 'Blue Lagoon', price: 'CAD $10.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Mocktails-1.jpg' },
@@ -148,15 +156,15 @@ export const menuData = {
     { id: 'tea2', name: 'Karak Tea', price: 'CAD $4.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Tea-Bar-1.jpg' },
     { id: 'tea3', name: 'Kashmiri Tea', price: 'CAD $5.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Tea-Bar-3.jpg' },
     { id: 'tea4', name: 'Rose Tea', price: 'CAD $4.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Tea-Bar-4.jpg' },
-    { id: 'tea5', name: 'Coffee', price: 'CAD $6.00', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Tea-Bar-4.jpg' },
-    { id: 'tea6', name: 'Pot Green Tea', price: 'CAD $4.00', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Tea-Bar-4.jpg' }
+    { id: 'tea5', name: 'Coffee', price: 'CAD $6.00', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Coffee.png' },
+    { id: 'tea6', name: 'Pot Green Tea', price: 'CAD $4.00', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Pot-Green-Tea-1.png' }
   ],
   juices: [
     { id: 'jui1', name: 'Orange Juice', price: 'CAD $9.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/2.jpg' },
     { id: 'jui2', name: 'Sugarcane Juice', price: 'CAD $9.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/1.jpg' },
-    { id: 'jui3', name: 'Pineapple Juice', price: 'CAD $12.00', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/2.jpg' },
-    { id: 'jui4', name: 'Cranberry Juice', price: 'CAD $9.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/3.jpg' },
-    { id: 'jui5', name: 'Apple Juice', price: 'CAD $9.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/3.jpg' }
+    { id: 'jui3', name: 'Pineapple Juice', price: 'CAD $12.00', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Pineapple-Juice.png' },
+    { id: 'jui4', name: 'Cranberry Juice', price: 'CAD $9.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Cranberry-Juice.png' },
+    { id: 'jui5', name: 'Apple Juice', price: 'CAD $9.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Apple-Juice.png' }
   ],
   water: [
     { id: 'wat1', name: 'Sparkling Water', price: 'CAD $4.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Water-1.jpg' },
