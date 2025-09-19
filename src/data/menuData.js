@@ -31,6 +31,54 @@ export const menuData = {
       price: 'CAD $10.99',
       image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Fries.png',
       badges: ['vegetarian']
+    },
+    {
+      id: 'sh5',
+      name: 'Chaat Papri',
+      description: '',
+      price: 'CAD $14.99',
+      image: 'https://i.ibb.co/5WjKFWgh/Chaat-Papri.png',
+      badges: []
+    },
+    {
+      id: 'sh6',
+      name: 'Pani Puri',
+      description: '',
+      price: 'CAD $12.99',
+      image: 'https://i.ibb.co/svXSbBq9/Pani-Puri.png',
+      badges: []
+    },
+    {
+      id: 'sh7',
+      name: 'Peri Peri Fries',
+      description: '',
+      price: 'CAD $13.99',
+      image: 'https://i.ibb.co/NdhvQdWn/Piri-Piri-Fries.png',
+      badges: []
+    },
+    {
+      id: 'sh8',
+      name: 'Sweet Potato Fries',
+      description: '',
+      price: 'CAD $14.99',
+      image: 'https://i.ibb.co/1fCPZgcb/Sweet-Potato-Fries.png',
+      badges: []
+    },
+    {
+      id: 'sh9',
+      name: 'Cauliflower Bites',
+      description: '',
+      price: 'CAD $15.99',
+      image: 'https://i.ibb.co/tw1Dh1Zv/Cauliflower-Bites.png',
+      badges: []
+    },
+    {
+      id: 'sh10',
+      name: 'Mozzarella Sticks',
+      description: '',
+      price: 'CAD $12.99',
+      image: 'https://i.ibb.co/WpKgCg2M/Mozzarella-Sticks.png',
+      badges: []
     }
   ],
   poutine: [
@@ -64,7 +112,7 @@ export const menuData = {
       id: 'nac1',
       name: 'Loaded Nachos',
       description: 'Cheese, diced tomatoes, diced onions, jalapenos, crispy tortilla, green onion, served with salsa',
-      price: 'CAD $17.99',
+      price: 'CAD $14.99',
       image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Nachos-2.jpg',
       badges: ['vegetarian']
     },
@@ -72,7 +120,7 @@ export const menuData = {
       id: 'nac2',
       name: 'Chicken Nachos',
       description: 'Marinated chicken, cheese, diced tomatoes, diced onions, crispy tortillas, green onions, jalapenos, served with salsa',
-      price: 'CAD $14.99',
+      price: 'CAD $17.99',
       image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Nachos-3.jpg',
       badges: []
     }
@@ -85,16 +133,14 @@ export const menuData = {
       price: 'CAD $15.99',
       image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Baked-Chicken-Wings.jpg',
       badges: []
-    }
-  ],
-  pita: [
+    },
     {
-      id: 'pit1',
-      name: 'Hummus with Toasted Pita',
-      description: 'Creamy hummus served with warm pita bread',
+      id: 'chi2',
+      name: 'Chicken Club Sandwich',
+      description: '',
       price: 'CAD $14.99',
-      image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Pita-1.jpg',
-      badges: ['vegetarian']
+      image: 'https://i.ibb.co/GfK5VYJN/Club-Sandwich.png',
+      badges: []
     }
   ],
   salads: [
@@ -155,9 +201,9 @@ export const menuData = {
     { id: 'tea1', name: 'Cardamom Tea', price: 'CAD $4.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Tea-Bar-2.jpg' },
     { id: 'tea2', name: 'Karak Tea', price: 'CAD $4.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Tea-Bar-1.jpg' },
     { id: 'tea3', name: 'Kashmiri Tea', price: 'CAD $5.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Tea-Bar-3.jpg' },
-    { id: 'tea4', name: 'Rose Tea', price: 'CAD $4.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Tea-Bar-4.jpg' },
+    { id: 'tea4', name: 'Pot Black Tea', price: 'CAD $12.99', badges: ['vegetarian'], image: 'https://i.ibb.co/tMGY2jrS/Pot-Green.png' },
     { id: 'tea5', name: 'Coffee', price: 'CAD $6.00', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Coffee.png' },
-    { id: 'tea6', name: 'Pot Green Tea', price: 'CAD $4.00', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Pot-Green-Tea-1.png' }
+    { id: 'tea6', name: 'Pot Green Tea', price: 'CAD $12.99', badges: ['vegetarian'], image: 'https://i.ibb.co/Kzh8Ng0Q/Pot-Black-Tea.png' }
   ],
   juices: [
     { id: 'jui1', name: 'Orange Juice', price: 'CAD $9.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/2.jpg' },
