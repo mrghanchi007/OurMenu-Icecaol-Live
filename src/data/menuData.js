@@ -212,6 +212,36 @@ export const menuData = {
     { id: 'jui4', name: 'Cranberry Juice', price: 'CAD $9.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Cranberry-Juice.png' },
     { id: 'jui5', name: 'Apple Juice', price: 'CAD $9.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/07/IceCoal-Apple-Juice.png' }
   ],
+  softDrink: [
+    {
+      id: 'sft1',
+      name: 'Coca-Cola Regular',
+      price: 'CAD $3.99',
+      image: 'https://i.ibb.co/yBMgCwj8/Coca-Cola-Regular.png',
+      badges: ['vegetarian']
+    },
+    {
+      id: 'sft2',
+      name: 'Diet Coke',
+      price: 'CAD $3.99',
+      image: 'https://i.ibb.co/4ZXjsyZj/Diet-Coke.png',
+      badges: ['vegetarian']
+    },
+    {
+      id: 'sft3',
+      name: 'Coca-Cola Zero Sugar',
+      price: 'CAD $3.99',
+      image: 'https://i.ibb.co/HRM0CL5/Coca-Cola-Zero-Sugar.png',
+      badges: ['vegetarian']
+    },
+    {
+      id: 'sft4',
+      name: 'Sprite',
+      price: 'CAD $3.99',
+      image: 'https://i.ibb.co/mYkndzZ/Sprite.png',
+      badges: ['vegetarian']
+    }
+  ],
   water: [
     { id: 'wat1', name: 'Sparkling Water', price: 'CAD $4.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Water-1.jpg' },
     { id: 'wat2', name: 'Spring Water', price: 'CAD $3.99', badges: ['vegetarian'], image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Water-2.jpg' }
