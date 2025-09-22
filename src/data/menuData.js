@@ -13,7 +13,7 @@ export const menuData = {
       name: 'Onion Rings',
       description: 'Seasoned with salt and pepper',
       price: 'CAD $14.99',
-      image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Shareables-Eatery-3.jpg',
+      image: 'https://i.ibb.co/tpNPTz14/Onion-Rings.png',
       badges: ['vegetarian']
     },
     {
@@ -21,7 +21,7 @@ export const menuData = {
       name: 'Veggie Potatoes',
       description: 'Crispy golden fries',
       price: 'CAD $12.99',
-      image: 'https://www.icecoal.ca/wp-content/uploads/2025/02/IceCoal-Shareables-Eatery-2.jpg',
+      image: 'https://i.ibb.co/S4WHd4hH/Veggie-Potatoes.png',
       badges: ['vegetarian']
     },
     {
@@ -69,7 +69,7 @@ export const menuData = {
       name: 'Cauliflower Bites',
       description: '',
       price: 'CAD $15.99',
-      image: 'https://i.ibb.co/tw1Dh1Zv/Cauliflower-Bites.png',
+      image: 'https://i.ibb.co/391Y6B6z/Cauliflower-Bites.png',
       badges: []
     },
     {
@@ -77,7 +77,7 @@ export const menuData = {
       name: 'Mozzarella Sticks',
       description: '',
       price: 'CAD $12.99',
-      image: 'https://i.ibb.co/WpKgCg2M/Mozzarella-Sticks.png',
+      image: 'https://i.ibb.co/JRxSS9DR/Mozzarella-Sticks.png',
       badges: []
     }
   ],
@@ -139,7 +139,7 @@ export const menuData = {
       name: 'Chicken Club Sandwich',
       description: '',
       price: 'CAD $14.99',
-      image: 'https://i.ibb.co/GfK5VYJN/Club-Sandwich.png',
+      image: 'https://i.ibb.co/mCLkpPVC/Club-Sandwich.png',
       badges: []
     }
   ],
@@ -244,14 +244,14 @@ export const menuData = {
     {
       id: 'sft5',
       name: 'Barbican Apple',
-      price: 'CAD $5.99',
+      price: 'CAD $19.99',
       image: 'https://i.ibb.co/zTynLqqg/Barbican-Apple.png',
       badges: ['vegetarian']
     },
     {
       id: 'sft6',
       name: 'Barbican Pomegranate',
-      price: 'CAD $5.99',
+      price: 'CAD $19.99',
       image: 'https://i.ibb.co/LhsTdyCz/Barbican-Pomegranate.png',
       badges: ['vegetarian']
     }
