@@ -240,6 +240,20 @@ export const menuData = {
       price: 'CAD $3.99',
       image: 'https://i.ibb.co/mYkndzZ/Sprite.png',
       badges: ['vegetarian']
+    },
+    {
+      id: 'sft5',
+      name: 'Barbican Apple',
+      price: 'CAD $5.99',
+      image: 'https://i.ibb.co/zTynLqqg/Barbican-Apple.png',
+      badges: ['vegetarian']
+    },
+    {
+      id: 'sft6',
+      name: 'Barbican Pomegranate',
+      price: 'CAD $5.99',
+      image: 'https://i.ibb.co/LhsTdyCz/Barbican-Pomegranate.png',
+      badges: ['vegetarian']
     }
   ],
   water: [
