@@ -13,7 +13,7 @@ export const menuData = {
       name: 'Onion Rings',
       description: 'Seasoned with salt and pepper',
       price: 'CAD $14.99',
-      image: 'https://i.ibb.co/tpNPTz14/Onion-Rings.png',
+      image: 'https://i.ibb.co/cS4mXfzH/Onion-Rings.png',
       badges: ['vegetarian']
     },
     {
@@ -77,7 +77,7 @@ export const menuData = {
       name: 'Mozzarella Sticks',
       description: '',
       price: 'CAD $12.99',
-      image: 'https://i.ibb.co/JRxSS9DR/Mozzarella-Sticks.png',
+      image: 'https://i.ibb.co/mFrQM3zb/Mozzarella-Sticks.png',
       badges: []
     }
   ],
@@ -139,7 +139,7 @@ export const menuData = {
       name: 'Chicken Club Sandwich',
       description: '',
       price: 'CAD $14.99',
-      image: 'https://i.ibb.co/mCLkpPVC/Club-Sandwich.png',
+      image: 'https://i.ibb.co/ksm7QX4D/Club-Sandwich.png',
       badges: []
     }
   ],
@@ -253,6 +253,13 @@ export const menuData = {
       name: 'Barbican Pomegranate',
       price: 'CAD $19.99',
       image: 'https://i.ibb.co/LhsTdyCz/Barbican-Pomegranate.png',
+      badges: ['vegetarian']
+    },
+    {
+      id: 'sft7',
+      name: 'Red Bull',
+      price: 'CAD $7.99',
+      image: 'https://i.ibb.co/gL7XBMCG/Red-Bull.png',
       badges: ['vegetarian']
     }
   ],
